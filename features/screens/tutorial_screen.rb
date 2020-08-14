@@ -1,4 +1,3 @@
-
 class TutorialScreen < BaseScreen
   def clickNext
     message = "//*[@text=(\"Find your flavour\") | //*[@text=(\"Choose your meal\")] | //*[@text=(\"Easy payment\")] | //*[@text=(\"Delivered fast\")]"

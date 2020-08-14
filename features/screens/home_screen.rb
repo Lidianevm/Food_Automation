@@ -1,4 +1,3 @@
-
 class HomeScreen < BaseScreen
   def categoriesPopularScreen
 

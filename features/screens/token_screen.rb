@@ -1,5 +1,5 @@
-class AutenticationScreen < BaseScreen
-  def auteticationPin
+class TokenScreen < BaseScreen
+  def autenticationPin
     #####
     firstPin = "(//*[@index=\"3\"])[1]"
     secondPin = "(//*[@index=\"4\"])[1]"
@@ -11,27 +11,19 @@ class AutenticationScreen < BaseScreen
 
     ## Input First Pin ##
     clickbyXpath(firstPin)
-    if @driver.is_keyboard_shown
-      clickbyXpath(btn_one)
-    end
+    clickbyXpath(btn_one) if @driver.is_keyboard_shown
 
     ## Input Second Pin ##
     clickbyXpath(secondPin)
-    if @driver.is_keyboard_shown
-      clickbyXpath(btn_one)
-    end
+    clickbyXpath(btn_one) if @driver.is_keyboard_shown
 
     ## Input Third Pin ##
     clickbyXpath(thirdPin)
-    if @driver.is_keyboard_shown
-      clickbyXpath(btn_one)
-    end
+    clickbyXpath(btn_one) if @driver.is_keyboard_shown
 
     ## Input Fourth Pin ##
     clickbyXpath(fourthPin)
-    if @driver.is_keyboard_shown
-      clickbyXpath(btn_one)
-    end
+    clickbyXpath(btn_one) if @driver.is_keyboard_shown
 
     ## Click Submit ##
     clickbyXpath(btn_Submit)

@@ -1,6 +1,13 @@
+require "rubygems"
 require "appium_lib"
 require "cucumber"
-require_relative "page_helper"
+require "cucumber/rake/task"
+require_relative "screen_helper.rb"
+
+#World(ScreenHelper)
+# Class to not pollute 'Object' class with appium methods
+class AppiumWorld
+end
 
 def caps
   { caps: { deviceName: "Nexus5X",
@@ -16,4 +23,7 @@ end
 
 Appium::Driver.new(caps, true)
 Appium.promote_appium_methods Object
-World(Screens)
+
+World do
+  AppiumWorld.new
+end
