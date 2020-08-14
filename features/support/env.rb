@@ -12,7 +12,7 @@ end
 def caps
   { caps: { deviceName: "Nexus5X",
             platformName: "Android",
-            app: (File.join(File.dirname(__FILE__), "Apk_Ifood.apk")),
+            app: (File.join(File.dirname(__FILE__), "Apk_Food.apk")),
             appActivity: "com.fooddelivery_pro.MainActivity",
             appPackage: "com.fooddelivery_pro",
             automationName: "UiAutomator2",
