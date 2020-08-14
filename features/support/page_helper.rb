@@ -5,8 +5,16 @@ module Screens
     @base ||= BaseScreen.new
   end
 
-  def start
-    @start ||= StartScreen.new
+  def tutorial
+    @start ||= TutorialScreen.new
+  end
+
+  def login
+    @home ||= RegisterScreen.new
+  end
+
+  def autentication
+    @home ||= AutenticationScreen.new
   end
 
   def home
