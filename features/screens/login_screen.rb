@@ -40,11 +40,14 @@ class LoginScreen < BaseScreen
   def clickCreateAccount
     #####################################
     #btn_createAccount = "//*[@text=(\"CREATE ACCOUNT\")]"
-    btn_createAccount = 'new UiSelector().text("CREATE ACCOUNT")'
+    #btn_createAccount = 'new UiSelector().text(\"CREATE ACCOUNT\")'
     ## Click Create Account ##
-    sleep 5
     #lickbyXpath(btn_createAccount)
-    @driver.find_element(:uiautomator, btn_createAccount).click
+    sleep 5
+    tapElement(1050, 970)
+    sleep 5
+    tapElement(930, 970)
+    #@driver.find_element(:uiautomator, btn_createAccount).click
   end
 
   ## Click Sign Up with facebook ##
@@ -57,5 +60,39 @@ class LoginScreen < BaseScreen
   def clickGoogleButton
     btn_google = "//*[@text=(\"SIGN UP WITH GOOGLE\")]"
     clickbyXpath(btn_google)
+  end
+
+  def validateEmail
+    ####################################################
+    input_email = "//*[@text=(\"E-mail\")]"
+    ####################################################
+    ## Validar se o Email campo está sendo exibido ##
+    waitforXpath(input_email)
+  end
+
+  def validatePhoneNumber
+    ############################################
+    input_phoneNumber = "//*[@text=(\"Phone number\")]"
+    ####################################################
+    ## Validar se o campo telefone está sendo exibido ##
+    waitforXpath(input_phoneNumber)
+  end
+
+  def validatePassword
+    ###########################################
+    input_password = "//*[@text=(\"Password\")]"
+    ####################################################
+    ## Validar se o campo senha está sendo exibido ##
+    waitforXpath(input_password)
+  end
+
+  def validateCreateAccountButton
+    btn_createAccount = "//*[@text=(\"CREATE ACCOUNT\")]"
+    waitforXpath(btn_createAccount)
+  end
+
+  def validateScreenCreateAccount
+    screen_createAccount = "//*[@text=(\"Create Account\")]"
+    waitforXpath(screen_createAccount)
   end
 end

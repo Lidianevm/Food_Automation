@@ -22,3 +22,28 @@ When("I click on Create Account button") do
   @login ||= LoginScreen.new
   @login.clickCreateAccount
 end
+
+Then("I should see the field personalEmail") do
+  @login ||= LoginScreen.new
+  @login.validateEmail
+end
+
+Then("I should see the field phoneNumber") do
+  @login ||= LoginScreen.new
+  @login.validatePhoneNumber
+end
+
+Then("I should see the field password") do
+  @login ||= LoginScreen.new
+  @login.validatePassword
+end
+
+Then("I should see create account button") do
+  @login ||= LoginScreen.new
+  @login.validateCreateAccountButton
+end
+
+Then("I should see Create Account Screen") do
+  @login ||= LoginScreen.new
+  @login.validateScreenCreateAccount
+end

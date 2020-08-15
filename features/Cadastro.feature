@@ -17,27 +17,19 @@ Feature: Register
         And I fill the tokenNumber
         Then I should see Categories Popular Screen
 
-    # @CT002 @SeeFields @CreateAccount
-    # Scenario: Show Email, Phone Number and Password Fields on Create Account screen
-    #     When I on the Create Account screen
-    #     Then I should see the field personalEmail
-    #     Then I should see the field phoneNumber
-    #     Then I should see the field password
+    @CT002 @SeeFields @CreateAccount
+    Scenario: Show Email, Phone Number and Password Fields on Create Account screen
+        When I click on I am New button
+        Then I should see the field personalEmail
+        Then I should see the field phoneNumber
+        Then I should see the field password
 
-    # @CT003 @CreateAccountButton
-    # Scenario: Ensure that exists Create Account Button
-    #     When I on the Create Account screen
-    #     Then I should see create account button
+    @CT003 @CreateAccountButton
+    Scenario: Ensure that exists Create Account Button
+        When I click on I am New button
+        Then I should see create account button
 
-    # @CT004 @AutenticationScreen
-    # Scenario: Show Autentication Screen
-    #     When I on the Autentication Screen
-    #     And I fill the tokenNumber
-    #     Then I should see Categories Popular Screen
-
-    # @CT005 @IAmANewButton @InitialScreen
-    # Scenario: Exists I Am New button
-    #     When I on the Initial Screen
-    #     And I click on the I Am New button
-    #     Then I should see Create Account Screen
+    @CT005 @IAmANewButton @InitialScreen
+    Scenario: Exists I Am New button
+        When I click on I am New button
 

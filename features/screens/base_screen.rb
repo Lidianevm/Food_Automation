@@ -31,6 +31,11 @@ class BaseScreen
     $driver.wait_true(time) { $driver.exists { $driver.find_element(element, value) } }
   end
 
+  ## Touch by Location
+  def tapElement(coord_x, coord_y)
+    Appium::TouchAction.new.tap(x: coord_x, y: coord_y).perform
+  end
+
   ## Metodo para clicar no objeto por ID ##
   def clickbyID(element)
     wait = Selenium::WebDriver::Wait.new :timeout => 15
