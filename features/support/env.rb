@@ -1,10 +1,8 @@
 require "rubygems"
 require "appium_lib"
 require "cucumber"
-require "cucumber/rake/task"
 require_relative "screen_helper.rb"
 
-#World(ScreenHelper)
 # Class to not pollute 'Object' class with appium methods
 class AppiumWorld
 end

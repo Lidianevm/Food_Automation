@@ -1,8 +1,9 @@
-
 Given("I am on the Tutorial Screen") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @tutorial ||= TutorialScreen.new
+  @tutorial.validateScreen
 end
 
 Then("I click on Next") do
+  @tutorial ||= TutorialScreen.new
   @tutorial.clickNext
 end

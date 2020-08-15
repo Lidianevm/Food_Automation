@@ -1,0 +1,93 @@
+Feature:  Register
+    Order to use the application
+    As a app user
+    I want to submit the form with Register, Facebook and Google
+
+  Background:                         # features/Cadastro.feature:6
+    Given I am on the Tutorial Screen # features/step_definitions/tutorial_steps.rb:1
+    Then I click on Next              # features/step_definitions/tutorial_steps.rb:6
+
+  @CT001  @ValidCredentials  @CreateAccount
+  Scenario:  Show food home screen when try to login with all informations filled # features/Cadastro.feature:11
+    When I click on I am New button                                               # features/step_definitions/login_steps.rb:1
+    And I fill the email with the personalEmail                                   # features/step_definitions/login_steps.rb:11
+    And I fill the phone number with the phoneNumber                              # features/step_definitions/login_steps.rb:6
+    And I fill the password with password                                         # features/step_definitions/login_steps.rb:16
+    When I click on Create Account button                                         # features/step_definitions/login_steps.rb:21
+      Could not parse expression `new UiSelector().new UiSelector().text("CREATE ACCOUNT")`: UiSelector has no `new UiSelector` method (Selenium::WebDriver::Error::InvalidSelectorError)
+      io.appium.uiautomator2.common.exceptions.UiSelectorSyntaxException: Could not parse expression `new UiSelector().new UiSelector().text("CREATE ACCOUNT")`: UiSelector has no `new UiSelector` method
+      	at io.appium.uiautomator2.utils.UiExpressionParser.findMethod(UiExpressionParser.java:198)
+      	at io.appium.uiautomator2.utils.UiExpressionParser.consumeMethodCall(UiExpressionParser.java:183)
+      	at io.appium.uiautomator2.utils.UiSelectorParser.parse(UiSelectorParser.java:54)
+      	at io.appium.uiautomator2.utils.UiAutomatorParser.consumeStatement(UiAutomatorParser.java:96)
+      	at io.appium.uiautomator2.utils.UiAutomatorParser.parse(UiAutomatorParser.java:49)
+      	at io.appium.uiautomator2.utils.ElementLocationHelpers.toSelectors(ElementLocationHelpers.java:123)
+      	at io.appium.uiautomator2.utils.ElementLocationHelpers.toSelector(ElementLocationHelpers.java:117)
+      	at io.appium.uiautomator2.handler.FindElement.findElement(FindElement.java:100)
+      	at io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:71)
+      	at io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:41)
+      	at io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:257)
+      	at io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:247)
+      	at io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:50)
+      	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
+      	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
+      	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
+      	at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:102)
+      	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
+      	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
+      	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
+      	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:435)
+      	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:293)
+      	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:267)
+      	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:250)
+      	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
+      	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
+      	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
+      	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:266)
+      	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
+      	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
+      	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:345)
+      	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1294)
+      	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:366)
+      	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:352)
+      	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:911)
+      	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:131)
+      	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:611)
+      	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:552)
+      	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:466)
+      	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:438)
+      	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)
+      	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+      	at java.lang.Thread.run(Thread.java:919)
+      ./features/screens/login_screen.rb:48:in `clickCreateAccount'
+      ./features/step_definitions/login_steps.rb:23:in `"I click on Create Account button"'
+      features/Cadastro.feature:16:in `I click on Create Account button'
+    And I fill the tokenNumber                                                    # features/step_definitions/token_steps.rb:1
+    Then I should see Categories Popular Screen                                   # features/step_definitions/home_steps.rb:1
+# @CT002 @SeeFields @CreateAccount
+# Scenario: Show Email, Phone Number and Password Fields on Create Account screen
+#     When I on the Create Account screen
+#     Then I should see the field personalEmail
+#     Then I should see the field phoneNumber
+#     Then I should see the field password
+# @CT003 @CreateAccountButton
+# Scenario: Ensure that exists Create Account Button
+#     When I on the Create Account screen
+#     Then I should see create account button
+# @CT004 @AutenticationScreen
+# Scenario: Show Autentication Screen
+#     When I on the Autentication Screen
+#     And I fill the tokenNumber
+#     Then I should see Categories Popular Screen
+# @CT005 @IAmANewButton @InitialScreen
+# Scenario: Exists I Am New button
+#     When I on the Initial Screen
+#     And I click on the I Am New button
+#     Then I should see Create Account Screen
+
+Failing Scenarios:
+cucumber features/Cadastro.feature:11 # Scenario:  Show food home screen when try to login with all informations filled
+
+1 scenario (1 failed)
+9 steps (1 failed, 2 skipped, 6 passed)
+1m18.842s
